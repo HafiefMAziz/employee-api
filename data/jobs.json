@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Software Consultant",
+    "category": "Product Management",
+    "max_salary": 5000,
+    "min_salary": 2000
+  },
+  {
+    "id": 2,
+    "name": "Speech Pathologist",
+    "category": "Research and Development",
+    "max_salary": "4500",
+    "min_salary": "1440"
+  },
+  {
+    "id": 3,
+    "name": "Research Nurse",
+    "category": "Business Development",
+    "max_salary": 4790,
+    "min_salary": 1037
+  },
+  {
+    "id": 4,
+    "name": "Payment Adjustment Coordinator",
+    "category": "Sales",
+    "max_salary": 4439,
+    "min_salary": 1049
+  },
+  {
+    "id": 5,
+    "name": "Programmer IV",
+    "category": "Marketing",
+    "max_salary": 4071,
+    "min_salary": 1090
+  },
+  {
+    "id": 6,
+    "name": "Associate Professor",
+    "category": "Product Management",
+    "max_salary": 4291,
+    "min_salary": 1704
+  },
+  {
+    "id": 7,
+    "name": "Executive Secretary",
+    "category": "Services",
+    "max_salary": 4252,
+    "min_salary": 1631
+  },
+  {
+    "id": 8,
+    "name": "Environmental Specialist",
+    "category": "Business Development",
+    "max_salary": 4258,
+    "min_salary": 1382
+  },
+  {
+    "id": 9,
+    "name": "VP Quality Control",
+    "category": "Legal",
+    "max_salary": 4498,
+    "min_salary": 1610
+  },
+  {
+    "id": 10,
+    "name": "Engineer IV",
+    "category": "Support",
+    "max_salary": 4974,
+    "min_salary": 1221
+  }
+]

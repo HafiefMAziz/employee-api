@@ -1,0 +1,98 @@
+<%- include('../layouts/header.ejs') %>
+<div class="div border rounded mb-4">
+    <form action="/employers/create" method="post" class="my-4 mx-4">
+        <div class="row mb-4">
+            <h4>Create a new employer</h4>
+        </div>
+        <div class="row mb-3">
+            <label for="inputName" class="col-sm-1 col-form-label">Name</label>
+            <div class="col-sm-3">
+                <input required name="name" type="text" class="form-control" id="inputName">
+            </div>
+            <label for="inputType" class="col-sm-1 col-form-label">Type</label>
+            <div class="col-sm-3">
+                <input required name="type" type="text" class="form-control" id="inputType">
+            </div>
+        </div>
+        <div class="row mb-4">
+            <label for="inputTotalEmployee" class="col-sm-1 col-form-label">Total Employee</label>
+            <div class="col-sm-3">
+                <input required name="total_employee" type="text" class="form-control" id="inputTotalEmployee">
+            </div>
+            <label for="inputCity" class="col-sm-1 col-form-label">City</label>
+            <div class="col-sm-3">
+                <input required name="city" type="text" class="form-control" id="inputCity">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success me-1">Create</button>
+    </form>
+</div>
+    <h4>Employer Lists</h4>
+    <% if(employers){ %>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Total Employee</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Option</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(employers.length> 1){
+                    employers.forEach(employer => {
+                    %>
+                    <tr>
+                        <th>
+                            <%= employer.id %>
+                        </th>
+                        <td>
+                            <%= employer.name %>
+                        </td>
+                        <td>
+                            <%= employer.type %>
+                        </td>
+                        <td>
+                            <%= employer.total_employee %>
+                        </td>
+                        <td>
+                            <%= employer.city %>
+                        </td>
+                        <td>
+                            <a href="/employers/update/<%= employer.id %>" type="button"
+                                class="btn btn-primary me-1">Update</button>
+                                <a href="/employers/delete/<%= employer.id %>" type="button"
+                                    class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                    <% }); } else{ %>
+                        <tr>
+                            <th>
+                                <%= employer.id %>
+                            </th>
+                            <td>
+                                <%= employer.name %>
+                            </td>
+                            <td>
+                                <%= employer.type %>
+                            </td>
+                            <td>
+                                <%= employer.total_employee %>
+                            </td>
+                            <td>
+                                <%= employer.city %>
+                            </td>
+                            <td>
+                                <a href="/employersupdate/<%= employers.id %>" type="button"
+                                    class="btn btn-primary me-1">Update</button>
+                                    <a href="/employersdelete/<%= employers.id %>" type="button"
+                                        class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                        <% } %>
+            </tbody>
+        </table>
+        <% } %>
+<%- include('../layouts/footer.ejs') %>

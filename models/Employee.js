@@ -51,7 +51,7 @@ class Employee {
                 newEmployee = new Employee(id, name, job, age, city)
                 employees.push(newEmployee);
                 this.save(employees);
-                resolve(newEmployee); 
+                resolve([newEmployee, employees]); 
             })
             .catch(err => reject(err));
         })
@@ -86,6 +86,7 @@ class Employee {
                     }
                     return employee;
                 })
+                this.save(employees);
                 resolve([updatedEmployee, employees]);
             })
             .catch(err => reject(err));

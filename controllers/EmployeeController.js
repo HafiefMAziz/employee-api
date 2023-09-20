@@ -2,16 +2,22 @@ const Employee = require("../models/Employee");
 
 class EmployeeController {
     static show(req, res){
-        if(req.params.id){
+        if(+req.params.id){
             Employee.getOneEmployee(+req.params.id)
             .then(result => {
-                res.send(result);
+                res.render('./employees/show.ejs', {
+                    title: 'Employee Lists',
+                    employee: result
+                });
             })
             .catch(err => res.send(err.message));
         }else{
             Employee.getEmployees()
             .then(result => {
-                res.send(result);
+                res.render('./employees/show.ejs', {
+                    title: 'Employee Lists',
+                    employees: result
+                });
             })
             .catch(err => res.send(err.message));
         }
@@ -21,7 +27,8 @@ class EmployeeController {
         const newEmployee = req.body;
         Employee.create(newEmployee)
         .then(result => {
-            res.send(`${result.name} has been registered into employees data`);
+            const [newEmployee, employees] = result;
+            res.redirect('/employees');        
         })
         .catch(err => res.send(err.message));
     }
@@ -30,17 +37,29 @@ class EmployeeController {
         Employee.delete(+req.params.id)
         .then(result => {
             const [deletedEmployee, employees] = result;
-            res.send(`${deletedEmployee.name} has been deleted!`);
+            res.redirect('/employees');        
         })
         .catch(err => res.send(err.message));
     }
 
+    static updateForm(req, res){
+        const newEmployee = req.body;
+        Employee.getOneEmployee(+req.params.id)
+        .then(result => {
+            res.render('./employees/updateForm.ejs',{
+                title: 'Employee Update Form',
+                employee: result
+            })
+        })
+        .catch(err => res.send(err.message));
+    }
     static update(req, res){
         const newEmployee = req.body;
+        console.log(newEmployee);
         Employee.update(+req.params.id, newEmployee)
         .then(result => {
             const [updatedEmployee, employees] = result;
-            res.send(`${updatedEmployee.name} has been updated to ${newEmployee.name}`);
+            res.redirect('/employees')
         })
         .catch(err => res.send(err.message));
     }

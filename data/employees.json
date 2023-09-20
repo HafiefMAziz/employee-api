@@ -4,7 +4,7 @@
     "name": "Jackie Najera",
     "job": "Marketing Manager",
     "age": 42,
-    "city": "Pasadena"
+    "city": "Jakarta"
   },
   {
     "id": 2,
@@ -68,5 +68,12 @@
     "job": "Editor",
     "age": 27,
     "city": "Szydłowo"
+  },
+  {
+    "id": 11,
+    "name": "Hafief Maulana Aziz",
+    "job": "Developer",
+    "age": 22,
+    "city": "Kota Tangerang"
   }
 ]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Riane Seviour",
+    "type": "Product Management",
+    "total_employee": 3,
+    "city": "Qianguo"
+  },
+  {
+    "id": 2,
+    "name": "Isaac Molloy",
+    "type": "Business Development",
+    "total_employee": 5,
+    "city": "Yangji"
+  },
+  {
+    "id": 3,
+    "name": "Gilbertine McCormick",
+    "type": "Legal",
+    "total_employee": 2,
+    "city": "Grabovci"
+  },
+  {
+    "id": 4,
+    "name": "Olva McVaugh",
+    "type": "Accounting",
+    "total_employee": 3,
+    "city": "Mutsu"
+  },
+  {
+    "id": 5,
+    "name": "Gayle Blanko",
+    "type": "Sales",
+    "total_employee": 5,
+    "city": "Magisterial"
+  },
+  {
+    "id": 6,
+    "name": "Clarinda Mulqueen",
+    "type": "Product Management",
+    "total_employee": 7,
+    "city": "Sainte-Sophie"
+  },
+  {
+    "id": 7,
+    "name": "Holli Clifford",
+    "type": "Research and Development",
+    "total_employee": 3,
+    "city": "Xiaosong"
+  },
+  {
+    "id": 8,
+    "name": "Filippa Duiged",
+    "type": "Research and Development",
+    "total_employee": 1,
+    "city": "Cikarang"
+  },
+  {
+    "id": 9,
+    "name": "Ophelia Meaker",
+    "type": "Business Development",
+    "total_employee": 8,
+    "city": "Tomingad"
+  },
+  {
+    "id": 10,
+    "name": "Thedric Harbottle",
+    "type": "Support",
+    "total_employee": 7,
+    "city": "San Juan"
+  }
+]

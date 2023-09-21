@@ -55,7 +55,6 @@ class JobController {
     }
     static update(req, res){
         const newJob = req.body;
-        console.log(newJob);
         Job.update(+req.params.id, newJob)
         .then(result => {
             const [updatedJob, jobs] = result;

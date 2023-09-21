@@ -55,7 +55,6 @@ class EmployeeController {
     }
     static update(req, res){
         const newEmployee = req.body;
-        console.log(newEmployee);
         Employee.update(+req.params.id, newEmployee)
         .then(result => {
             const [updatedEmployee, employees] = result;
